@@ -1,284 +1,410 @@
-svg {
-  width: 251px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left:-40px;
-  margin-top:-250px;
-  animation:animTranslate .6s linear infinite;
+img, video, object {
+  max-width: 100%;
 }
 
-body{
-	margin:0;
-	font:300  1.3em/1.3em Roboto, sans-serif;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  min-height: 600px;
-  background:#056DA5;
+/* Clearfix */
+
+.clearfix:before, .clearfix:after {
+  content:"";
+  display:table;
 }
 
-a {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  min-width: 300px;
-  font-weight: 400;
-  text-align: center;
-  top: 50%;
-  margin-top: 190px;
-  color: #FFF;
-  text-decoration: none;
-  border-radius: 2px;
-  background-color: #03A2E2;
-  padding: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 3px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.24);
+.clearfix:after {
+    clear: both;
 }
-h1 {
-    position: absolute;
-    z-index: 2;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.3em;
-    width: 100%;
-    text-align: center;
-    top: 50%;
-    margin-top: 80px;
-}
-*,:after,:before{box-sizing:border-box}
-.pull-left{float:left}
-.pull-right{float:right}
-.clearfix:after,.clearfix:before{content:'';display:table}
-.clearfix:after{clear:both;display:block}
 
-.roll-wrap{
-	top:50%;
-	left:50%;
-	width:475px;
-	height:145px;
-	position:absolute;
-	margin-top:-72.5px;
-	margin-left:-237.5px;
-	border-bottom:5px solid #FFF; 
+.clearfix {
+  *zoom:1;
 }
-.roll{
-	width:475px;
-	height:145px;
-	padding-bottom:20px;
+
+body {
+
+  /* Ubicación de la imagen */
+  background-image: url(http://fullhdpictures.com/wp-content/uploads/2015/04/Spectacular-Office-Wallpapers.jpg);
+
+  /* Nos aseguramos que la imagen de fondo este centrada vertical y horizontalmente en todo momento */
+  background-position: center center;
+
+  /* La imagen de fondo no se repite */
+  background-repeat: no-repeat;
+
+  /* La imagen de fondo está fija en el viewport, de modo que no se mueva cuando la altura del contenido supere la altura de la imagen. */
+  background-attachment: fixed;
+
+  /* La imagen de fondo se reescala cuando se cambia el ancho de ventana del navegador */
+  background-size: cover;
+
+  /* Fijamos un color de fondo para que se muestre mientras se está cargando la imagen de fondo o si hay problemas para cargarla  */
+  background-color: #464646;
+  font-family: 'Nobile', sans-serif;
+  font-size: 1em;
 }
-.roll .roll-roof,
-.roll .roll-main{
-	margin:auto;
+
+#container{
+  width: 960px;
+  height:auto;
+  margin: 0 auto;
 }
-.roll-wrap .road .mud:before,
-.roll-wrap .road .mud:after,
-.roll .roll-roof .roll-silencer:before,
-.roll .roll-roof .roll-silencer:after,
-.roll .roll-body:before,
-.roll .roll-body:after,
-.roll .roll-main .roll-back:before,
-.roll .roll-main .roll-back:after,
-.roll .roll-main .roll-front:after{
-	content:'';
-	position:absolute;
+
+#contacto{
+  width:40%;
+  height: auto;
+  float:left;
+  border-radius:20px;
+  color:white;
+  font-weight:bold;
+  background-color:black;
+  opacity:0.80;
 }
-.roll .roll-roof{
-	width:80px;
-	height:60px;
-	bottom:-1px;
-	position:relative;
-	background:#056598;
-	border:15px solid #FFF;
-	border-bottom:none;
+
+#informacion{
+  width:45%;
+  border: 1px solid black;
+  float:right;
+  border-radius:20px;
+  color:white;
+  font-weight:bold;
+  background-color:black;
+  opacity:0.80;
 }
-.roll .roll-roof .roll-silencer{
-	width:14px;
-	left:-50px;
-	height:12px;
-	bottom:-1px;
-	position:absolute;
-	background:#FFF;
+
+#datos{
+  width:90%;
+  margin:0 auto;
 }
-.roll .roll-roof .roll-silencer:before{
-	height:0;
-	bottom:100%;
-	width:inherit;
-	border:6px solid #FFF;
-	border-top:4px solid transparent;
-	border-left:8px solid transparent;
+
+h2,h3{
+  text-align:center;
 }
-.roll .roll-roof .roll-silencer:after{
-	left:4px;
-	width:5px;
-	height:12px;
-	bottom:100%;
-	background:inherit;
-	transform:skewY(-35deg);
+
+#contacto a{
+  color:white;
+  text-decoration:none;
 }
-.roll .roll-roof .roll-silencer .roll-smoke{
-	left:-5px;
-	width:16px;
-	height:16px;
-	bottom:20px;
-	border-radius:50%;
-	position:absolute;
-	background:#FFF;
-	transform:scale(0);
-	animation:translateSmoke .5s linear infinite;
+
+.avatar{
+  margin:0 auto;
+  margin-top:20px;
+  background-image: url(https://i.ibb.co/QprfrmT/Curriculum-Propic.jpg);
+
+  /* cambia estos dos valores para definir el tamaño de tu círculo */
+  height: 100px;
+  width: 100px;
+
+  /* los siguientes valores son independientes del tamaño del círculo */
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  background-size: 100% auto;
 }
-.roll-main{
-	height:60px;
-	width:185px;
-	position:relative;
+
+.descripcion{
+  text-align:justify;
 }
-.roll .roll-main .roll-body{
-	height:inherit;
-	width:inherit;
-	position:relative;
-	background:#FFF;
+
+#enlaces{
+  width:27%;
+  margin:0 auto;
+
 }
-.roll .roll-main .roll-body:before{
-	left:-15px;
-	width:30px;
-	height:inherit;
-	background:inherit;
-	transform:skewX(-20deg);
+
+.logoAlineado{
+  vertical-align:middle;
 }
-.roll .roll-main .roll-body:after{
-	bottom:0;
-	right:15px;
-	width:35px;
-	height:41px;
-	background:#056598;
+
+/*Menu de navegacion*/
+
+#menu {
+  height:50px;
+  width:100%;
+  background-color: black;
+  opacity:0.80;
+  font-weight:bold;
 }
-.roll .roll-main .roll-back{
-	bottom:-1px;
-	width:75px;
-	height:45px;
-	position:absolute;
+
+#menu ul {
+  padding:0;
+  height:50px;
+  width:400px;
 }
-.roll .roll-main .roll-back:before{
-	width:75px;
-	height:45px;
-	background:#056598;
-	border-radius:50% 50% 0 0 / 85% 85% 0 0;
+
+#menu li {
+  display:inline;
+  float:left;
+  background-color: black;
 }
-.roll .roll-main .roll-back:after{
-	top:50%;
-	left:50%;
-	width:60px;
-	height:60px;
-	border-radius:50%;
-	margin-top:-15px;
-	margin-left:-30px;
-	background:transparent;
-	border:15px solid #FFF;
+
+#menu a {
+  border-right:1px solid #555252;
+  color: #fff;
+  display: inline-block;
+  width:100px;
+  text-align:center;
+  text-decoration:none;
+  line-height: 50px;
+  text-shadow: 1px 1px 0px #283744;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
-.roll .roll-main .roll-front{
-	z-index:1;
-	width:60px;
-	height:60px;
-	right:-24px;
-	bottom:-20px;
-	border-radius:50%;
-	position:absolute;
-	background:#FFF;
-	border-top:2px solid #056598;
+
+#menu li:last-child a {
+  border-right: 0;
 }
-.roll .roll-main .roll-front:after{
-	top:50%;
-	left:50%;
-	width:80px;
-	height:20px;
-	margin-top:-10px;
-	margin-left:-40px;
-	background:inherit;
-	border:2px solid #056598;
+
+#menu a:hover, #menu a:active {
+  background-color: gray;
+  color:black;
 }
-.roll-wrap .road{
-	right:0;
-	bottom:0;
-	height:15px;
-	width:140px;
-	overflow:hidden;
-	position:absolute;
+
+#menu a#pull {
+  display: none;
+  color:white;
 }
-.roll-wrap .road .mud-wrap{
-	width:160px;
-	position:absolute;
-	animation:moveRoad .4s linear infinite;
+
+.container {
+  width:960px;
+  margin: 0 auto;
+  height: auto;
+  line-height: 180%;
 }
-.roll-wrap .road .mud{
-	bottom:0;
-	width:40px;
+
+/* Portafolio */
+
+#filters {
+  padding:0;
+  list-style:none;
+  font-weight:bold;
+  font-size:19px;
+}
+
+#filters li {
 	float:left;
-	height:15px;
-	position:relative;
-	display:inline-block;
-}
-.roll-wrap .road .mud:before,
-.roll-wrap .road .mud:after{
-	width:20px;
-	height:20px;
-	border-radius:4px;
-	background:#FFF;
-	transform:rotate(45deg);
-}
-.roll-wrap .road .mud:before{
-	left:0;
-	bottom:-17px;
-}
-.roll-wrap .road .mud:after{
-	right:0;
-	bottom:-20px;
 }
 
-.roll-wrap .roll-roof,
-.roll-wrap .roll-body,
-.roll-wrap .roll-silencer,
-.roll-wrap .roll-back:before,
-.roll-wrap .roll-front{
-	animation:animTranslate .6s linear infinite;
+.filter {
+	display: block;
+	padding:5px 20px;
+	text-decoration:none;
+	color:#666;
+	cursor: pointer;
 }
-.roll-wrap .roll-silencer{
-	animation-duration:.4s;
+
+.filter.active {
+	background: black;
+	color:#fff;
+  opacity:0.80;
 }
-.roll-wrap .roll-front{
-	animation-duration:.3s;
+
+#portfoliolist .portfolio {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  width:23%;
+  margin:1%;
+  display:none;
+  float:left;
+  overflow:hidden;
 }
-.roll-wrap .roll-back{
-	animation:animTranslate .8s linear infinite;
+
+.portfolio-wrapper {
+	overflow:hidden;
+	position: relative !important;
+	background: #666;
+	cursor:pointer;
 }
-@keyframes moveRoad{
-	0%{
-		right:-40px;
+
+.portfolio img {
+	max-width:100%;
+	position: relative;
+}
+
+.portfolio .label {
+	position: absolute;
+	width: 100%;
+	height:40px;
+	bottom:-40px;
+}
+
+.portfolio .label-bg {
+  background: black;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+.portfolio .label-text {
+  	color:#fff;
+    font-weight:bold;
+  	position: relative;
+  	z-index:500;
+  	padding:5px 8px;
+}
+
+.portfolio .text-category {
+	display:block;
+	font-size:19px;
+}
+
+/* Footer */
+
+footer {
+  height:40px;
+  background-color:black;
+  opacity:0.80;
+  margin-top: 35px;
+  color:#fff;
+  font-weight:bold;
+  font-size: 17px;
+  letter-spacing: 2px;
+  text-align: center;
+  padding-top:20px;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+	#container{
+		width: 90%;
 	}
-	100%{
-		right:0;
+
+	#contacto, #informacion{
+		width: 45%;
 	}
 }
-@keyframes translateSmoke{
-	0%{
-		opacity:0;
-		transform:scale(0) translate(0);
-	}
-	60%{
-		transform:scale(.5) translate(0);
-	}
-	100%{
-		opacity:.6;
-		transform:scale(1) translate(-10px,-40px);
-	}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+  #enlaces{
+    width:34%;
+  }
+
 }
-@keyframes animTranslate{
-	0%{
-		transform:translateY(0);
+
+@media screen and (min-width: 481px) and (max-width: 767px){
+	#container{
+		width: 90%;
 	}
-	50%{
-		transform:translateY(2px);
+
+	#contacto{
+		width: 48%;
 	}
-	100%{
-		transform:translateY(0);
+
+  #informacion{
+    width: 48%;
+  }
+
+  #enlaces{
+    width:46%;
+  }
+
+  #menu{
+		height: auto;
+    background-color: black;
+    opacity:0.80;
 	}
+
+	#menu ul{
+		width: 100%;
+		display: block;
+		height: auto;
+	}
+
+	#menu li{
+		width: 50%;
+		float: left;
+		position: relative;
+	}
+
+	#menu a{
+    border-right:1px solid #555252;
+    border-bottom:1px solid #555252;
+		text-align: left;
+		width: 100%;
+		text-indent: 25px;
+	}
+
+}
+
+@media screen and (max-width: 480px){
+	#container{
+		width: 90%;
+	}
+
+	#contacto{
+		width: 100%;
+    float:left;
+	}
+
+  #informacion{
+    width: 100%;
+    float:left;
+  }
+
+  #enlaces{
+    width:35%;
+  }
+
+  #menu{
+		border-bottom: 0;
+    background-color: black;
+    opacity:0.80;
+    height: auto;
+	}
+
+	#menu ul{
+		display: none;
+		height: auto;
+		width: 100%
+	}
+
+	#menu li{
+		width: 50%;
+		float: left;
+		position: relative;
+		background-color: black;
+	}
+
+	#menu a{
+    border-right:1px solid #555252;
+    border-bottom:1px solid #555252;
+		width: 100%;
+	}
+
+	#menu a#pull{
+		display: block;
+		background-color: black;
+		width: 100%;
+		position: relative;
+		text-align: left;
+		text-indent: 25px;
+    color:white;
+	}
+
+	#menu a#pull:after{
+		content: "";
+		background: url(http://i1057.photobucket.com/albums/t393/Jml_1990/nav-icon.png) no-repeat;
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		position: absolute;
+		right: 15px;
+		top: 10px;
+  }
+}
+
+@media only screen and (max-width : 320px) {
+	#menu li {
+		display: block;
+		float: none;
+		width: 100%;
+	}
+	#menu li a {
+		border-bottom: 1px solid #576979;
+	}
+
+  #enlaces{
+    width:40%;
+  }
 }
